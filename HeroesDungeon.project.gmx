@@ -27,16 +27,17 @@
     <room>rooms\rm_3</room>
     <room>rooms\rm_4</room>
     <room>rooms\rm_5</room>
-    <room>rooms\room6</room>
-    <room>rooms\room7</room>
-    <room>rooms\room8</room>
-    <room>rooms\room9</room>
-    <room>rooms\room10</room>
-    <room>rooms\room11</room>
-    <room>rooms\room12</room>
-    <room>rooms\room13</room>
-    <room>rooms\room14</room>
-    <room>rooms\room15</room>
+    <room>rooms\rm_6</room>
+    <room>rooms\rm_7</room>
+    <room>rooms\rm_8</room>
+    <room>rooms\rm_9</room>
+    <room>rooms\rm_10</room>
+    <room>rooms\rm_11</room>
+    <room>rooms\rm_12</room>
+    <room>rooms\rm_13</room>
+    <room>rooms\rm_14</room>
+    <room>rooms\rm_15</room>
+    <room>rooms\room16</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
