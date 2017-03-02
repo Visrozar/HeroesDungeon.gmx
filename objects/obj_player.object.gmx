@@ -29,13 +29,21 @@
 phy_fixed_rotation = true;
 
 //Player Speed
-spd = 8;
+spd = 10;
+
+//For fixing diagonal speed
+hspd = 0;
+vspd = 0;
+len = 0;
 
 //Player animation speed
 animation_speed = 1;
 
 //Image Change speed
 image_speed = 0;
+
+//Set state
+state = scr_move_state;
 </string>
           </argument>
         </arguments>
@@ -59,40 +67,7 @@ image_speed = 0;
           <argument>
             <kind>1</kind>
             <string>///Move player
-
-//Move Right
-if (keyboard_check(ord('D'))) {
-    phy_position_x += spd;
-    sprite_index = spr_player_right;
-    image_speed = animation_speed;
-}
-
-//Move Left
-if (keyboard_check(ord('A'))) {
-    phy_position_x -= spd;
-    sprite_index = spr_player_left;
-    image_speed = animation_speed;
-}
-
-//Move Up
-if (keyboard_check(ord('W'))) {
-    phy_position_y -= spd;
-    sprite_index = spr_player_up;
-    image_speed = animation_speed;
-}
-
-//Move Down
-if (keyboard_check(ord('S'))) {
-    phy_position_y += spd;
-    sprite_index = spr_player_down;
-    image_speed = animation_speed;
-}
-
-//No key pressed
-if (keyboard_check(vk_nokey)){
-    image_speed = 0;
-    image_index = 0;
-}
+script_execute(state);
 </string>
           </argument>
         </arguments>
@@ -116,6 +91,31 @@ if (keyboard_check(vk_nokey)){
           <argument>
             <kind>1</kind>
             <string>///Colide
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="39">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///set attack state
+
+state = scr_attack_state;
 </string>
           </argument>
         </arguments>
