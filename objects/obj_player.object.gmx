@@ -28,6 +28,8 @@
             <string>///initialize player
 event_inherited();
 
+hp = 30;
+
 //Player Speed
 spd = 10;
 
@@ -69,31 +71,10 @@ state = scr_move_state;
             <string>///Move player
 event_inherited();
 script_execute(state);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="39">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///set attack state
 
-state = scr_attack_state;
+if(hp&lt;=0) {
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -112,8 +93,8 @@ state = scr_attack_state;
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>8,32</point>
-    <point>32,32</point>
+    <point>8,8</point>
+    <point>32,8</point>
     <point>32,64</point>
     <point>8,64</point>
   </PhysicsShapePoints>

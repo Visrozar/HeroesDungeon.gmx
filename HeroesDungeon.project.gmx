@@ -15,6 +15,7 @@
     <sprite>sprites\spr_leeroy_left</sprite>
     <sprite>sprites\spr_leeroy_up</sprite>
     <sprite>sprites\spr_leeroy_down</sprite>
+    <sprite>sprites\spr_player_attack</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -29,6 +30,7 @@
     <object>objects\obj_view</object>
     <object>objects\obj_leeroy</object>
     <object>objects\obj_lifeform_parent</object>
+    <object>objects\obj_player_attack</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_0</room>

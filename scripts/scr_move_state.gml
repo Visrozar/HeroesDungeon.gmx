@@ -2,6 +2,10 @@
 
 scr_get_input();
 
+if(attack_right or attack_left or attack_up or attack_down) {
+    bullet = instance_create(obj_player.x, obj_player.y, obj_player_attack);
+}
+
 //get axis
 var xaxis = (right-left);
 var yaxis = (down-up);
@@ -29,15 +33,15 @@ image_speed = animation_speed;
 if (len == 0) image_index=0;
 
 //Vertical animation
-if (vspd > 0) {
+if (vspd > 0 or attack_down) {
     sprite_index = spr_player_down;
-} else if (vspd < 0) {
+} if (vspd < 0 or attack_up) {
     sprite_index = spr_player_up;
 }
 
 //Horizontal animation
-if (hspd > 0) {
+if (hspd > 0 or attack_right) {
     sprite_index = spr_player_right;
-} else if (hspd < 0) {
+} if (hspd < 0 or attack_left) {
     sprite_index = spr_player_left;
 }
