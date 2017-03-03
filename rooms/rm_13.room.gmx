@@ -2,7 +2,7 @@
 <room>
   <caption></caption>
   <width>1024</width>
-  <height>576</height>
+  <height>768</height>
   <vsnap>32</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
@@ -41,7 +41,7 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="obj_player" xview="0" yview="0" wview="675" hview="576" xport="0" yport="0" wport="1024" hport="768" hborder="200" vborder="115" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="obj_player" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="200" vborder="115" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -57,7 +57,7 @@
     <instance objName="obj_wall" x="992" y="128" name="inst_26AED18A" locked="0" code="" scaleX="1" scaleY="14" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="0" y="96" name="inst_E7C53934" locked="0" code="" scaleX="27" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="928" y="96" name="inst_FD92DEA6" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_warp" x="0" y="224" name="inst_864FBCBF" locked="0" code="target_x = 512;&#xA;target_y = 320;&#xA;target_r = rm_12;&#xA;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_warp" x="0" y="224" name="inst_864FBCBF" locked="0" code="target_x = 736;&#xA;target_y = 320;&#xA;target_r = rm_12;&#xA;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_warp" x="864" y="96" name="inst_59A68130" locked="0" code="target_x = 96;&#xA;target_y = 512;&#xA;target_r = rm_10;&#xA;" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
