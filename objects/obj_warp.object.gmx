@@ -27,8 +27,9 @@
             <kind>1</kind>
             <string>/// warp code
 
-obj_player.x = target_x;
 room_goto(target_r);
+obj_player.x = target_x;
+obj_player.y = target_y;
 </string>
           </argument>
         </arguments>
