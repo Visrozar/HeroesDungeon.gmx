@@ -3,9 +3,9 @@
   <spriteName>spr_player_down</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-10</depth>
+  <depth>0</depth>
   <persistent>-1</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_lifeform_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,16 +25,27 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Initilize Player
+            <string>///initialize player
+event_inherited();
+
+hp = 30;
 
 //Player Speed
-spd = 8;
+spd = 10;
+
+//For fixing diagonal speed
+hspd = 0;
+vspd = 0;
+len = 0;
 
 //Player animation speed
 animation_speed = 1;
 
 //Image Change speed
 image_speed = 0;
+
+//Set state
+state = scr_move_state;
 </string>
           </argument>
         </arguments>
@@ -58,39 +69,11 @@ image_speed = 0;
           <argument>
             <kind>1</kind>
             <string>///Move player
+event_inherited();
+script_execute(state);
 
-//Move Right
-if (keyboard_check(ord('D'))) {
-    phy_position_x += spd;
-    sprite_index = spr_player_right;
-    image_speed = animation_speed;
-}
-
-//Move Left
-if (keyboard_check(ord('A'))) {
-    phy_position_x -= spd;
-    sprite_index = spr_player_left;
-    image_speed = animation_speed;
-}
-
-//Move Up
-if (keyboard_check(ord('W'))) {
-    phy_position_y -= spd;
-    sprite_index = spr_player_up;
-    image_speed = animation_speed;
-}
-
-//Move Down
-if (keyboard_check(ord('S'))) {
-    phy_position_y += spd;
-    sprite_index = spr_player_down;
-    image_speed = animation_speed;
-}
-
-//No key pressed
-if (keyboard_check(vk_nokey)){
-    image_speed = 0;
-    image_index = 0;
+if(hp&lt;=0) {
+    instance_destroy();
 }
 </string>
           </argument>

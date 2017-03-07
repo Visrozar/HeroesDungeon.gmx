@@ -18,11 +18,21 @@
     <sprite>sprites\spr_rock</sprite>
     <sprite>sprites\spr_pillar</sprite>
     <sprite>sprites\sp_door</sprite>
+    <sprite>sprites\spr_leeroy_right</sprite>
+    <sprite>sprites\spr_leeroy_left</sprite>
+    <sprite>sprites\spr_leeroy_up</sprite>
+    <sprite>sprites\spr_leeroy_down</sprite>
+    <sprite>sprites\spr_player_attack</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_get_input.gml</script>
+    <script>scripts\scr_move_state.gml</script>
+    <script>scripts\scr_attack_state.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
@@ -32,6 +42,10 @@
     <object>objects\obj_pillar</object>
     <object>objects\obj_barrel</object>
     <object>objects\objj_hole</object>
+    <object>objects\obj_view</object>
+    <object>objects\obj_leeroy</object>
+    <object>objects\obj_lifeform_parent</object>
+    <object>objects\obj_player_attack</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline0</timeline>
